@@ -1,0 +1,50 @@
+[
+  {
+    "title": "MFE Plugin",
+    "type": "routes",
+    "toggles": [
+      {
+        "key": "booking.ticket",
+        "label": "Ticket"
+      }
+    ]
+  },
+  {
+    "title": "Feature Plugin",
+    "type": "routes",
+    "toggles": [
+      {
+        "key": "booking/flight.search",
+        "label": "FL Search"
+      },
+      {
+        "key": "booking/flight.edit",
+        "label": "FL Edit"
+      },
+      {
+        "key": "booking/passenger.search",
+        "label": "PA Search"
+      }
+    ]
+  },
+  {
+    "title": "Service Plugin",
+    "type": "services",
+    "toggles": [
+      {
+        "key": "service-flight",
+        "label": "Flight"
+      }
+    ]
+  },
+  {
+    "title": "Function Plugin",
+    "type": "functions",
+    "toggles": [
+      {
+        "key": "fn-validate-passenger-status",
+        "label": "Validator"
+      }
+    ]
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "discovery": [
+    {
+      "id": 1,
+      "key": "mfe-ticket",
+      "type": "module",
+      "remoteEntry": "http://localhost:4520/remoteEntry.js",
+      "exposedModule": "./routes"
+    },
+    {
+      "id": 2,
+      "key": "feature-flight-search",
+      "type": "module",
+      "remoteEntry": "http://localhost:4510/remoteEntry.js",
+      "exposedModule": "./component"
+    },
+    {
+      "id": 3,
+      "key": "service-flight",
+      "type": "module",
+      "remoteEntry": "http://localhost:4530/remoteEntry.js",
+      "exposedModule": "./service"
+    },
+    {
+      "id": 4,
+      "key": "fn-validate-passenger-status",
+      "type": "module",
+      "remoteEntry": "http://localhost:4540/remoteEntry.js",
+      "exposedModule": "./fn"
+    }
+  ],
+  "customizing": [
+    {
+      "id": 1,
+      "category": "routes",
+      "scope": "booking",
+      "path": "ticket",
+      "type": "routes",
+      "source": [
+        "mfe-ticket"
+      ],
+      "active": false
+    },
+    {
+      "id": 2,
+      "category": "routes",
+      "scope": "booking/flight",
+      "path": "search",
+      "type": "component",
+      "source": [
+        "feature-flight-search"
+      ],
+      "active": false
+    },
+    {
+      "id": 3,
+      "category": "routes",
+      "scope": "booking/flight",
+      "path": "edit",
+      "type": "card",
+      "source": [
+        "Flight Edit",
+        "<h3>🤨</h3>"
+      ],
+      "active": false
+    },
+    {
+      "id": 4,
+      "category": "routes",
+      "scope": "booking/passenger",
+      "path": "search",
+      "type": "card",
+      "source": [
+        "Passenger Search",
+        "<h3>😉</h3>"
+      ],
+      "active": false
+    },
+    {
+      "id": 5,
+      "category": "services",
+      "scope": "service-flight",
+      "active": false
+    },
+    {
+      "id": 6,
+      "category": "functions",
+      "scope": "fn-validate-passenger-status",
+      "active": false
+    }
+  ],
+  "dynamic-ui": [
+    {
+      "id": 1,
+      "title": "MFE Plugin",
+      "type": "routes",
+      "toggles": [
+        {
+          "key": "booking.ticket",
+          "label": "Ticket"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Feature Plugin",
+      "type": "routes",
+      "toggles": [
+        {
+          "key": "booking/flight.search",
+          "label": "FL Search"
+        },
+        {
+          "key": "booking/flight.edit",
+          "label": "FL Edit"
+        },
+        {
+          "key": "booking/passenger.search",
+          "label": "PA Search"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Service Plugin",
+      "type": "services",
+      "toggles": [
+        {
+          "key": "service-flight",
+          "label": "Flight"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Function Plugin",
+      "type": "functions",
+      "toggles": [
+        {
+          "key": "fn-validate-passenger-status",
+          "label": "Validator"
+        }
+      ]
+    }
+  ]
+}
